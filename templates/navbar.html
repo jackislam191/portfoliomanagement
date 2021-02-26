@@ -1,0 +1,10 @@
+<nav>
+    <span style="float:right">
+        {% if user.is_authenticated %}
+            <span>Hi {{ user.username }}</span>
+        {% else %}
+            <span><a href="{% url 'login' %}">Login</a></span>
+            <span><a href="">Register</a></span>
+        {% endif %}
+    </span>
+</nav>
